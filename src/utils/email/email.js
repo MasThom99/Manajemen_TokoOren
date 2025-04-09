@@ -1,5 +1,6 @@
 import nodemailer from "nodemailer";
 import dotenv from "dotenv";
+
 dotenv.config();
 const { EMAIL, EMAIL_PASS } = process.env;
 export const sendEmail = async (dataEmail) => {
@@ -14,8 +15,8 @@ export const sendEmail = async (dataEmail) => {
           pass: EMAIL_PASS,
         },
       });
-      const response = await transport.sendEmail(dataEmail)
-      resolve(response)
+      const response = await transport.sendEmail(dataEmail);
+      resolve(response);
     } catch (error) {}
   });
 };
