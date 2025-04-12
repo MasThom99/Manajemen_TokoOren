@@ -24,6 +24,7 @@ export const activityLogEntity = new EntitySchema({
       type: "timestamp",
       default: () => "CURRENT_TIMESTAMP",
     },
+    
     deleted_at: {
       type: "timestamp",
       nullable: true,

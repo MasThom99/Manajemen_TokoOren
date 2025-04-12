@@ -49,7 +49,5 @@ export const detail_jualEntity = new EntitySchema({
       onDelete: "CASCADE",
       JoinColumn: { name: "id_produk", referencedColumn: "id" },
     },
-
-    
   },
 });
