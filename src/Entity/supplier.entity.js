@@ -1,5 +1,5 @@
 import { EntitySchema } from "typeorm";
-export const supplierEntity = new EntitySchema({
+export const SupplierEntity = new EntitySchema({
   name: "Supplier",
   tableName: "supplier",
   columns: {
@@ -13,12 +13,17 @@ export const supplierEntity = new EntitySchema({
       type: "varchar",
     },
 
+    nama_produk: {
+      type: "varchar",
+      nullable: true,
+    },
+
     alamat_supplier: {
       type: "varchar",
     },
 
     no_telp: {
-      type: "int",
+      type: "varchar",
     },
 
     created_at: {

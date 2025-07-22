@@ -25,7 +25,7 @@ export const pembelianEntity = new EntitySchema({
       type: "varchar",
     },
 
-    namaBarang: {
+    nama_barang: {
       type: "varchar",
     },
 
@@ -52,6 +52,7 @@ export const pembelianEntity = new EntitySchema({
 
     deleted_at: {
       type: "timestamp",
+      deleteDate: true,
       nullable: true,
     },
   },

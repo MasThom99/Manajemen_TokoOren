@@ -1,5 +1,5 @@
 import { EntitySchema, JoinColumn } from "typeorm";
-export const karyawanEntity = new EntitySchema({
+export const KaryawanEntity = new EntitySchema({
   name: "Karyawan",
   tableName: "karyawan",
   columns: {
@@ -27,6 +27,7 @@ export const karyawanEntity = new EntitySchema({
 
     foto: {
       type: "varchar",
+      nullable: true,
     },
 
     tgl_masuk: {
@@ -55,7 +56,7 @@ export const karyawanEntity = new EntitySchema({
       type: "one-to-many",
       target: "Penjualan",
       cascade: true,
-      inverseSide: "kategori",
+      inverseSide: "karyawan",
     },
   },
 });

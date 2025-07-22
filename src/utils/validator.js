@@ -32,7 +32,7 @@ export const validateUpdate = [
     .isEmail()
     .withMessage("it's not email")
     .exists()
-    .withMessage("email is required"),
+    .withMessage("username is required"),
   body("password")
     .exists()
     .withMessage("password is required")

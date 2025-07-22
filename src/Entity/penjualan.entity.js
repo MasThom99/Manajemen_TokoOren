@@ -1,5 +1,5 @@
 import { EntitySchema, JoinColumn } from "typeorm";
-export const penjualanEntity = new EntitySchema({
+export const PenjualanEntity = new EntitySchema({
   name: "Penjualan",
   tableName: "penjualan",
   columns: {
@@ -19,10 +19,11 @@ export const penjualanEntity = new EntitySchema({
 
     id_karyawan: {
       type: "uuid",
+      
     },
 
     id_produk: {
-        type: "uuid",
+      type: "uuid",
     },
 
     nota_jual: {
@@ -74,10 +75,10 @@ export const penjualanEntity = new EntitySchema({
     },
 
     produk: {
-        type: "many-to-one",
-        target: "Produk",
-        onDelete: "CASCADE",
-        JoinColumn: {name: "id_produk", referenceColumn: "id"}
+      type: "many-to-one",
+      target: "Produk",
+      onDelete: "CASCADE",
+      JoinColumn: { name: "id_produk", referenceColumn: "id" },
     },
 
     detail_jual: {

@@ -40,6 +40,7 @@ export const UserEntity = new EntitySchema({
 
     deleted_at: {
       type: "timestamp",
+      deleteDate: true,
       nullable: true,
     },
   },

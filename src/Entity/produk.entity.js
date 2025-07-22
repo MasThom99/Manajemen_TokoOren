@@ -1,5 +1,5 @@
 import { EntitySchema, JoinColumn } from "typeorm";
-export const produkEntity = new EntitySchema({
+export const ProdukEntity = new EntitySchema({
   name: "Produk",
   tableName: "produk",
   columns: {
@@ -40,6 +40,7 @@ export const produkEntity = new EntitySchema({
 
     deleted_at: {
       type: "timestamp",
+      deleteDate: true,
       nullable: true,
     },
   },

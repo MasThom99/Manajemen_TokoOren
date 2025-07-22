@@ -1,5 +1,5 @@
 import { EntitySchema } from "typeorm";
-export const kategoryEntity = new EntitySchema({
+export const KategoriEntity = new EntitySchema({
   name: "Kategori",
   tableName: "kategori",
   columns: {
@@ -19,6 +19,7 @@ export const kategoryEntity = new EntitySchema({
 
     deleted_at: {
       type: "timestamp",
+      deleteDate: true,
       nullable: true,
     },
   },

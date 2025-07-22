@@ -1,10 +1,9 @@
 import nodemailer from "nodemailer";
 import dotenv from "dotenv";
-
 dotenv.config();
 const { EMAIL, EMAIL_PASS } = process.env;
 export const sendEmail = async (dataEmail) => {
-  return new Promise(async (resolveContent, reject) => {
+  return new Promise(async (resolve, reject) => {
     try {
       const transport = nodemailer.createTransport({
         host: "smtp.gmail.com",
@@ -15,7 +14,7 @@ export const sendEmail = async (dataEmail) => {
           pass: EMAIL_PASS,
         },
       });
-      const response = await transport.sendEmail(dataEmail);
+      const response = await transport.sendMail(dataEmail);
       resolve(response);
     } catch (error) {}
   });
